@@ -1,0 +1,44 @@
+/* Navigate */
+.fixed-top{
+  height: 9vh;
+}
+
+/* HOME */
+
+.homeContainer{
+  height: 91vh;
+  margin-top: 9vh;
+}
+
+.headerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../src/assets/backpizza.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 33vh;
+  color: beige;
+}
+
+/* THE CARD */
+
+.cardContainer{
+  display: flex;
+  gap: 2%;
+  padding:3%;
+}
+
+.cardSpan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 150%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+}
