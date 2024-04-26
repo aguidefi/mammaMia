@@ -1,0 +1,55 @@
+
+/* Navigate */
+.fixed-top{
+  height: 9vh;
+}
+
+/* HOME */
+
+.homeContainer{
+  margin-top: 9vh;
+  background-color: #1b1b1d;
+}
+
+.headerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../src/assets/backpizza.jpg");
+  background-size: cover;
+  width: 98.75vw;
+  height: 33vh;
+  color: beige;
+}
+
+/**THE CARD **/
+
+.cardContainer{
+  gap: 1.5%;
+  padding: 4%;
+}
+
+.cardContainer .pizzaCard{
+  padding: 4%;
+  width: 20%;
+  color: gray;
+}
+
+.cardContainer .pizzaCard img{
+  width: 100%;
+}
+
+.cardSpan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+  font-size: 150%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  height: 6vh;
+}

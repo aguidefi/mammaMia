@@ -4,7 +4,7 @@ import icon from '../assets/pizzaicon.svg'
 
 export const Navigate = () => {
   return (
-    <Navbar bg="primary" data-bs-theme="dark" className='fixed-top'>
+    <Navbar bg="secondary" data-bs-theme="dark" className='fixed-top'>
         <Container>
           <Navbar.Brand href="#home">
             <img
