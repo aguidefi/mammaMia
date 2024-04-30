@@ -53,3 +53,50 @@
   justify-content: space-around;
   height: 6vh;
 }
+
+/**DETAILS CARD **/
+
+.detailsCard {
+  display: flex;
+  margin-top: 3rem;
+  height: 30rem;
+  padding: 0;
+  border: solid 1px rgba(0, 0, 0, 0.103);
+}
+
+.imgDetails{
+  width: 40%;
+}
+
+.imgDetails img{
+  width: 100%;
+  height: 100%;
+}
+
+.detailsTxt {
+  width: 60%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.txtInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.txtBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.txtBottom button{
+  background-color: #DC3545;
+  border: none;
+  height: 3rem;
+  width: 6rem;
+  color: white;
+  border-radius: 0.3rem;
+}

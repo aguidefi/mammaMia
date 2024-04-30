@@ -1,35 +1,56 @@
 import { useContext } from "react"
 import { PizzaContext } from "../context/PizzaProvider"
+import { useParams } from "react-router-dom";
 
 
 export const Details = () => {
 
-  const {pizzas} = useContext(PizzaContext)
+  const {pizzasData, setAddCart, addCart, agregadas, setAgregadas} = useContext(PizzaContext)
+
+  const {id} = useParams();
+  const pizzaSeleccionada = pizzasData.find((pizza)=>{
+    return pizza.id === id;
+  })
+
+  function agregarAlCarrito(){
+    setAddCart([...addCart, pizzaSeleccionada]);
+    if(!agregadas.some(item => item.id === pizzaSeleccionada.id)){
+      setAgregadas([...agregadas, pizzaSeleccionada])
+    }
+  }
 
   return (
     <>
       {
-        pizzas.map((pizza,id)=>(
+        pizzasData.map((pizza,id)=>(
           <div className="detailsCard" key={id} value={pizza}>
-            <div className="detailsImg">{pizza.img}</div>
+            <div className="imgDetails">
+              <img src={pizzaSeleccionada.img} alt={pizzaSeleccionada.name} />
+            </div>
             <div className="detailsTxt">
               <div className="txtInfo">
-                <h2>{pizza.name}</h2>
+                <h2>{pizzaSeleccionada.name}</h2>
                 <hr/>
-                <p>{pizza.desc}</p>
+                <p>{pizzaSeleccionada.desc}</p>
                 <p><strong>Ingredientes:</strong></p>
                 <ul>
-                {pizza.ingredients.map((ingrediente, i) => (
+                {pizzaSeleccionada.ingredients.map((ingrediente, i) => (
                   <li key={i}>🍕 {ingrediente}</li>
                 ))}
                 </ul>
-                
               </div>
-              <div className="txtBottom"></div>
+              <div className="txtBottom">
+                <h2>
+                  Precio: {pizzaSeleccionada.price}
+                </h2>
+                <button onClick={agregarAlCarrito}>
+                  Añadir 🛒
+                </button>
+              </div>
             </div>
           </div>
         ))
       }
     </>
   )
-}
+};
